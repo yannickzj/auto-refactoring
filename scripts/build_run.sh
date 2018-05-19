@@ -1,7 +1,8 @@
 #!/bin/bash
 
 PROJECT="auto-refactor"
+JAR="$PROJECT-1.0-SNAPSHOT-jar-with-dependencies.jar"
 MAIN=refactor.analysis.Main
 
-mvn compile
-#java -cp target/lib:target/classes $MAIN
+mvn clean package
+java -cp target/$JAR $MAIN
