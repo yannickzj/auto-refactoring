@@ -1,0 +1,14 @@
+
+##paths for JUnit, rt.jar and jce.jar
+#javaclasspath=${env.PROJECT_DIR}/libraries/junit-4.7.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/jce.jar
+
+##classpath for application to be analysed
+appclasspath=${env.PROJECT_DIR}/joda-time/src/main/java:${env.PROJECT_DIR}/joda-time/lib/joda-convert-1.1.jar:${env.PROJECT_DIR}/joda-time/src/test/java
+#appclasspath=${env.PROJECT_DIR}/joda-time/build/classes:${env.PROJECT_DIR}/joda-time/lib/joda-convert-1.1.jar:${env.PROJECT_DIR}/joda-time/build/tests
+
+#process-dirs=-process-dir ${env.PROJECT_DIR}/joda-time/build/classes -process-dir ${env.PROJECT_DIR}/joda-time/build/tests
+
+
+##application class containing main
+#appmain=org.joda.time.chrono.TestAll
+appmain=org.joda.time.TestAllPackages

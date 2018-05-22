@@ -1,0 +1,5 @@
+appclasspath=${env.PROJECT_DIR}/hsqldb/bin:${env.PROJECT_DIR}/hsqldb/lib/spring-1.2.8.jar:${env.PROJECT_DIR}/hsqldb/lib/commons-logging-api-1.0.4.jar:${env.PROJECT_DIR}/hsqldb/lib/ant-1.7.0.jar:${env.PROJECT_DIR}/hsqldb/lib/servlet-api-5.5.15.jar
+
+process-dirs= -process-dir ${env.PROJECT_DIR}/hsqldb/bin
+
+appmain=org.hsqldb.HsqlDbMasterTestSuite

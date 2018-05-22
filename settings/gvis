@@ -1,0 +1,7 @@
+appclasspath=${env.PROJECT_DIR}/google-visualization/build/class/test:${env.PROJECT_DIR}/google-visualization/build/class/main:${env.PROJECT_DIR}/google-visualization/lib/servlet-api.jar:${env.PROJECT_DIR}/google-visualization/lib/easymock-2.5.jar:${env.PROJECT_DIR}/google-visualization/lib/guava-r07.jar:${env.PROJECT_DIR}/google-visualization/lib/icu4j-4_0_1.jar:${env.PROJECT_DIR}/google-visualization/lib/opencsv-1.8.jar:${env.PROJECT_DIR}/google-visualization/lib/commons-logging-1.1.1.jar:${env.PROJECT_DIR}/google-visualization/lib/commons-lang-2.4.jar:${env.PROJECT_DIR}/google-visualization/lib/javacc.jar
+
+appmain=com.google.visualization.datasource.QuerySplitterTest
+
+process-dirs= -process-dir ${env.PROJECT_DIR}/google-visualization/build/class/test
+
+classlist=-dynamic-package com -dynamic-package com.google -dynamic-package com.google.visualization -dynamic-package com.google.visualization.datasource -dynamic-package com.google.visualization.datasource.render -dynamic-package com.google.visualization.datasource.datatable -dynamic-package com.google.visualization.datasource.datatable.value -dynamic-package com.google.visualization.datasource.query -dynamic-package com.google.visualization.datasource.query.parser -dynamic-package com.google.visualization.datasource.query.engine -dynamic-package com.google.visualization.datasource.query.scalarfunction -dynamic-package com.google.visualization.datasource.query.mocks -dynamic-package com.google.visualization.datasource.util -dynamic-package com.google.visualization.datasource.base 

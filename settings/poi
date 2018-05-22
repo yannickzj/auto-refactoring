@@ -1,0 +1,12 @@
+##paths for JUnit, rt.jar and jce.jar
+
+##classpath for application to be analysed
+appclasspath=${env.PROJECT_DIR}/poi/lib/ant-1.8.2.jar:${env.PROJECT_DIR}/poi/lib/commons-codec-1.5.jar:${env.PROJECT_DIR}/poi/lib/commons-logging-1.1.jar:${env.PROJECT_DIR}/poi/lib/junit-3.8.1.jar:$HOMEprojects/poi/lib/log4j-1.2.13.jar:${env.PROJECT_DIR}/poi/ooxml-lib/dom4j-1.6.1.jar:${env.PROJECT_DIR}/poi/ooxml-lib/ooxml-schemas-1.1.jar:${env.PROJECT_DIR}/poi/ooxml-lib/ooxml-schemas-src-1.1.jar:${env.PROJECT_DIR}/poi/ooxml-lib/stax-api-1.0.1.jar:${env.PROJECT_DIR}/poi/ooxml-lib/xmlbeans-2.3.0.jar:${env.PROJECT_DIR}/poi/build/test-classes:${env.PROJECT_DIR}/poi/build/scratchpad-classes:${env.PROJECT_DIR}/poi/build/ooxml-classes/:${env.PROJECT_DIR}/poi/build/ooxml-test-classes/:${env.PROJECT_DIR}/poi/build/excelant-test-classes/:/homed2jain/projects/poi/build/excelant-classes/:${env.PROJECT_DIR}/poi/build/scratchpad-test-classes/:${env.PROJECT_DIR}/poi/build/scratchpad-classes/:${env.PROJECT_DIR}/poi/build/classes/:$HOMEprojects/poi/build/:${env.PROJECT_DIR}/poi/build/test-classes
+
+process-dirs= -process-dir ${env.PROJECT_DIR}/poi/build/test-classes
+ 
+
+##${env.PROJECT_DIR}/poi/build/ooxml-xsds-src:${env.PROJECT_DIR}/poi/src/contrib/poi-ruby/java:${env.PROJECT_DIR}/poi/src/examples/src:${env.PROJECT_DIR}/poi/src/excelant/java:${env.PROJECT_DIR}/poisrc/excelant/testcases:${env.PROJECT_DIR}/poi/src/java:${env.PROJECT_DIR}/poi/src/ooxml/java:${env.PROJECT_DIR}/poi/src/ooxml/testcases:${env.PROJECT_DIR}/poi/src/scratchpad/src:$HOMEprojects/poi/src/scratchpad/testcases:${env.PROJECT_DIR}/poi/src/testcases:${env.PROJECT_DIR}/poi/test-data
+
+##application class containing main
+appmain=org.apache.poi.AllPOITests

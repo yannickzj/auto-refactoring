@@ -1,0 +1,5 @@
+appclasspath=${env.PROJECT_DIR}/jdom/test/build/jdom-test-1.SNAPSHOT.jar:${env.PROJECT_DIR}/jdom/core/build/jdom-1.SNAPSHOT.jar:${env.PROJECT_DIR}/jdom/core/lib/xerces.jar
+
+appmain=-main-class org.jdom.test.cases.Alltests
+
+process-dirs=-process-dir ${env.PROJECT_DIR}/jdom/test/build/classes/

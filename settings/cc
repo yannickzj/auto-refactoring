@@ -1,0 +1,5 @@
+appclasspath=${env.PROJECT_DIR}/apache-commons-collections/build/tests/:${env.PROJECT_DIR}/apache-commons-collections/build/classes/
+
+process-dirs=-process-dir ${env.PROJECT_DIR}/apache-commons-collections/build/tests/
+
+appmain=org.apache.commons.collections.TestAllPackages

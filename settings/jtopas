@@ -1,0 +1,5 @@
+javaclasspath=/home/divam/projects/libraries/junit-4.7.jar:/usr/lib/jvm/java-7-openjdk/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk/jre/lib/jce.jar
+
+appclasspath=/home/divam/projects/jtopas/build/classes:/home/divam/projects/jtopas/build/lib
+
+appmain=de.susebox.SuseboxTestSuite

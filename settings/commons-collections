@@ -1,0 +1,5 @@
+appclasspath=${env.PROJECT_DIR}/commons-collections/target/classes:${env.PROJECT_DIR}/commons-collections/target/lib/hamcrest-core-1.3.jar:${env.PROJECT_DIR}/commons-collections/target/lib/commons-lang3-3.7.jar:${env.PROJECT_DIR}/commons-collections/target/lib/easymock-3.5.1.jar:${env.PROJECT_DIR}/commons-collections/target/lib/junit-4.12.jar:${env.PROJECT_DIR}/commons-collections/target/lib/objenesis-2.6.jar
+
+appmain=
+
+process-dirs=-process-dir ${env.PROJECT_DIR}/commons-collections/target/test-classes

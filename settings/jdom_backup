@@ -1,0 +1,5 @@
+appclasspath=${env.PROJECT_DIR}/jdom/core/build/classes:${env.PROJECT_DIR}/jdom/dist-1.SNAPSHOT/jdom-1.SNAPSHOT.jar:${env.PROJECT_DIR}/jdom/test/build/jdom-test-1.SNAPSHOT.jar:${env.PROJECT_DIR}/jdom/contrib/lib/isorelax.jar:${env.PROJECT_DIR}/jdom/contrib/lib/jakarta-regexp-1.1.jar:${env.PROJECT_DIR}/jdom/core/lib/ant.jar:${env.PROJECT_DIR}/jdom/core/lib/jaxen.jar:${env.PROJECT_DIR}/jdom/core/lib/xalan.jar:${env.PROJECT_DIR}/jdom/core/lib/xerces.jar:${env.PROJECT_DIR}/jdom/core/lib/xml-apis.jar:${env.PROJECT_DIR}/jdom/test/lib/optional.jar
+
+appmain=org.jdom.test.cases.Alltests
+
+process-dirs=-process-dir ${env.PROJECT_DIR}/jdom/test/build/classes/

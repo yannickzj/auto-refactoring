@@ -1,0 +1,3 @@
+appclasspath=${env.PROJECT_DIR}/jgrapht/bin:${env.PROJECT_DIR}/jgrapht/jgrapht-touchgraph/3rdparty/com/touchgraph/TGGraphLayout/UNKNOWN/TGGraphLayout-UNKNOWN.jar
+process-dirs = -process-dir ${env.PROJECT_DIR}/jgrapht/bin
+appmain=org.jgrapht.AllTests

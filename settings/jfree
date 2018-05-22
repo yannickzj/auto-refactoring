@@ -1,0 +1,5 @@
+##classpath for application to be analysed
+appclasspath=${env.PROJECT_DIR}/jfreechart/source/:${env.PROJECT_DIR}/jfreechart/tests/:${env.PROJECT_DIR}/jfreechart/lib/iText-2.1.5.jar:${env.PROJECT_DIR}/jfreechart/lib/servlet.jar:${env.PROJECT_DIR}/jfreechart/lib/jcommon-1.0.17.jar
+
+##application class containing main
+appmain=org.jfree.chart.junit.JFreeChartTestSuite

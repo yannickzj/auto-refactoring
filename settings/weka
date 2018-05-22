@@ -1,0 +1,5 @@
+appclasspath=${env.PROJECT_DIR}/weka/build/classes:${env.PROJECT_DIR}/weka/build/testcases:${env.PROJECT_DIR}/weka/lib/:${env.PROJECT_DIR}/weka/lib/java-cup.jar:${env.PROJECT_DIR}/weka/lib/JFlex.jar:${env.PROJECT_DIR}/weka/lib/junit.jar:${env.PROJECT_DIR}/weka/lib/packageManager.jar
+
+appmain=weka.AllTests
+
+process-dirs= -process-dir ${env.PROJECT_DIR}/weka/build/testcases
