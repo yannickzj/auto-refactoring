@@ -27,4 +27,6 @@ target/
 sootOutput/
 .idea/
 projects/
+results/
+lib/m2/
 
