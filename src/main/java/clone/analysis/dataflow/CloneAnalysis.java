@@ -88,8 +88,8 @@ public class CloneAnalysis extends SceneTransformer {
 
     public static String project = "$PROJECT";
 
-    public static final String junitTestCaseClassName = "org.junit.Assert";
-    //public static final String junitTestCaseClassName = "junit.framework.TestCase";
+    public static final String junitAssertClassName = "org.junit.Assert";
+    public static final String junitTestCaseClassName = "junit.framework.TestCase";
 
     public static final int NUM_CORES = Runtime.getRuntime().availableProcessors();
 
@@ -212,6 +212,7 @@ public class CloneAnalysis extends SceneTransformer {
 
     private static void generateTestClassList() {
         final SootClass junitTestCaseClass = Scene.v().getSootClass(junitTestCaseClassName);
+        final SootClass junitAssertClass = Scene.v().getSootClass(junitAssertClassName);
 
         //testClassList.addAll(Scene.v().getActiveHierarchy().getSubclassesOfIncluding(junitTestCaseClass));
         testClassList.addAll(Scene.v().getApplicationClasses());
@@ -220,6 +221,9 @@ public class CloneAnalysis extends SceneTransformer {
 
         if (RUN_ON_TEST) {
             for (SootMethod sm : junitTestCaseClass.getMethods())
+                if (sm.isPublic() && sm.isStatic() && sm.isConcrete() && !sm.isMain())
+                    staticCallsLookup.add(sm);
+            for (SootMethod sm : junitAssertClass.getMethods())
                 if (sm.isPublic() && sm.isStatic() && sm.isConcrete() && !sm.isMain())
                     staticCallsLookup.add(sm);
         } else {
@@ -539,13 +543,11 @@ public class CloneAnalysis extends SceneTransformer {
     private boolean isInterestingMethod(SootMethod aMethod) {
         if (aMethod.isConcrete()) {
             if (RUN_ON_TEST) {
-                /*
                 for (Tag tag: aMethod.getTags()) {
                     if (tag instanceof VisibilityAnnotationTag && containsTestAnnotation((VisibilityAnnotationTag) tag)) {
                         return true;
                     }
                 }
-                */
                 return aMethod.getName().startsWith("test") || aMethod.getName().startsWith("should");
             }
         }
@@ -555,7 +557,6 @@ public class CloneAnalysis extends SceneTransformer {
     private boolean containsTestAnnotation(VisibilityAnnotationTag vTag) {
         for (AnnotationTag aTag: vTag.getAnnotations()) {
             if (isTestAnnotation(aTag)) {
-                //System.out.println(aTag.getType());
                 return true;
             }
         }

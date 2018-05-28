@@ -55,6 +55,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.github.javaparser</groupId>
+      <artifactId>javaparser-symbol-solver-core</artifactId>
+      <version>3.6.6</version>
+    </dependency>
+    <dependency>
       <!--
       <groupId>ca.mcgill.sable</groupId>
       <artifactId>soot</artifactId>
@@ -228,7 +233,9 @@
             <goals>
               <goal>java</goal>
             </goals>
+            <!--
             <phase>compile</phase>
+            -->
             <configuration>
               <mainClass>clone.analysis.dataflow.CloneAnalysis</mainClass>
               <commandlineArgs>-cp ${javaclasspath}:${appclasspath} -f jimple -w -full-resolver -print-tags -allow-phantom-refs -keep-line-number -p jop enabled:true -O -p cg.cha enabled:true,verbose:true -p cg.spark enabled:false,verbose:true -x junit.framework ${detect.excludes} ${detect.classlist} ${appmain} ${process-dirs} --similarityargs project=${detect.project.name} min=${detect.min} result_location=${detect.result_location}</commandlineArgs>

@@ -29,4 +29,5 @@ sootOutput/
 projects/
 results/
 lib/m2/
+venv/
 

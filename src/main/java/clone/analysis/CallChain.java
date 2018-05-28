@@ -73,7 +73,7 @@ public class CallChain {
             try {
                resolveList.putAll(call, (List<SootMethod>) h.resolveAbstractDispatch(invokeMeth.getDeclaringClass(), invokeMeth));
             } catch (Exception e) {
-               System.out.println(invokeMeth.getDavaDeclaration() + invokeMeth.toString());
+               System.out.println("TO HANDLE: " + invokeMeth.getDavaDeclaration() + invokeMeth.toString());
                continue;
                //throw e;
             }
